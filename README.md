@@ -9,15 +9,10 @@ This git repository helps you easily integrate the cloud message queue service I
 Create an account at http://openshift.redhat.com/ and set up you local machine with the client tools.
 
 Create a ruby-1.9 application (you can call your application whatever you want)
-<pre>
-    rhc app create ironmq ruby-1.9
-</pre>
-Add this upstream IronMQ repo
-<pre>
-    cd ironmq
-    git remote add upstream -m master git://github.com/openshift-quickstart/ironmq-openshift-quickstart.git
-    git pull -s recursive -X theirs upstream master
-</pre>
+```
+    rhc app create ironmq ruby-1.9 --from-code git://github.com/openshift-quickstart/ironmq-openshift-quickstart.git
+```
+If `--from-code` is not recognized, update your `rhc` gem.
 
 ###Step 2. Configure IronMQ###
 
